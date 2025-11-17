@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiscal Policy Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="gameContainer">
+
+    <h1 id="title">Fiscal Policy Scenario Game</h1>
+
+    <!-- NAME ENTRY -->
+    <div id="nameContainer">
+        <input type="text" id="studentName" placeholder="Enter Your Name">
+        <button id="startBtn">Start Game</button>
+    </div>
+
+    <!-- SCOREBOARD -->
+    <div id="scoreboard" class="hidden">
+        <div class="scoreItem">Name: <span id="displayName"></span></div>
+        <div class="scoreItem">Question: <span id="questionNumber">0</span> / 30</div>
+        <div class="scoreItem">Score: <span id="score">0</span></div>
+        <div class="scoreItem">Date: <span id="dateStamp"></span></div>
+    </div>
+
+    <!-- SCENARIO TEXT -->
+    <div id="scenarioBox" class="hidden">
+        <p id="scenarioText"></p>
+    </div>
+
+    <!-- TAX / SPENDING PANEL -->
+    <div id="policyPanel" class="hidden">
+        <h3>Select the Correct Fiscal Policy Type</h3>
+        <div id="buttonContainerA">
+            <button class="choiceBtn policyBtn" data-answer="tax">Tax Policy</button>
+            <button class="choiceBtn policyBtn" data-answer="spending">Spending Policy</button>
+            <button class="choiceBtn policyBtn" data-answer="none">No Change</button>
+        </div>
+    </div>
+
+    <!-- GROWTH PANEL -->
+    <div id="growthPanel" class="hidden">
+        <h3>Select the Economic Effect</h3>
+        <div id="buttonContainerB">
+            <button class="choiceBtn growthBtn" data-answer="encourage">Encourage Growth</button>
+            <button class="choiceBtn growthBtn" data-answer="slow">Slow Growth</button>
+        </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <button id="submitBtn" class="hidden">Submit</button>
+
+    <!-- FEEDBACK -->
+    <div id="resultBox"></div>
+
+    <!-- END SCREEN -->
+    <div id="endScreen" class="hidden">
+        <h2>Game Complete!</h2>
+        <p>Your final score: <span id="finalScore"></span> / 30</p>
+    </div>
+
+</div>
+
+<script src="fiscalSim.js"></script>
+</body>
+</html>
